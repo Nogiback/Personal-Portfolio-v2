@@ -10,7 +10,7 @@ import {
 export default function Projects() {
   return (
     <div className='flex h-screen items-center justify-center'>
-      <Card className='text w-[350px] bg-card'>
+      <Card className='font-primary w-[350px] bg-card'>
         <CardHeader>
           <CardTitle>Card Title</CardTitle>
           <CardDescription>Card Description</CardDescription>

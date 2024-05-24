@@ -18,6 +18,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        primary: ["Nunito Sans", "ui-sans-serif"],
+        secondary: ["Noto Sans Mono", "ui-monospace"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
