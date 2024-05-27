@@ -1,6 +1,6 @@
 # Personal-Portfolio-v2
 
-My personal website built with [React](https://react.dev/), [TailwindCSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com), and deployed to [Vercel](https://vercel.com/).
+Latest version of my personal website built with [React](https://react.dev/), [TailwindCSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com), and deployed to [Vercel](https://vercel.com/).
 
 <br/>
 
