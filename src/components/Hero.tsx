@@ -1,18 +1,30 @@
-import React from 'react';
+import { Button } from '@/components/ui/button';
+import { CircleArrowDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className='flex h-screen items-center justify-center'>
-      <div className='flex flex-col text-left'>
-        <h1 className='text-edge-outline font-secondary cursor-default bg-white bg-clip-text text-2xl font-light leading-tight text-transparent'>
+    <div className='flex h-screen items-center justify-center bg-[url("./assets/hero-bg.svg")] bg-cover bg-center pb-36'>
+      <div className='flex flex-col gap-6 text-left'>
+        <h1 className='text-edge-outline font-secondary cursor-default bg-primary bg-clip-text text-2xl font-light leading-tight text-transparent'>
           Hello, my name is...
         </h1>
-        <h1 className='font-primary my-12 cursor-default bg-blue-400 bg-clip-text text-8xl font-bold italic leading-tight text-transparent'>
+        <h1 className='font-primary cursor-default bg-accent bg-clip-text text-8xl font-bold leading-tight text-transparent'>
           Peter Do.
         </h1>
-        <p className='text-edge-outline font-secondary cursor-default bg-white bg-clip-text font-extralight leading-tight text-transparent'>
+        <p className='text-edge-outline font-secondary cursor-default bg-primary bg-clip-text font-extralight leading-tight text-transparent'>
           Former Environmental Engineer. Current Full Stack Web Developer.
         </p>
+        <Button
+          onClick={() =>
+            document
+              .getElementById('About')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
+          variant='outline'
+          className='font-secondary w-fit gap-2 hover:text-secondary'
+        >
+          Learn more about me <CircleArrowDown />
+        </Button>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        primary: ["Nunito Sans", "ui-sans-serif"],
+        primary: ["Red Hat Display", "ui-sans-serif"],
         secondary: ["Noto Sans Mono", "ui-monospace"],
       },
       colors: {
