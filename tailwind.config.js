@@ -71,6 +71,18 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fadeAndScroll": {
+          from: { opacity: "0", top: "-100px" },
+          to: { opacity: "1", top: "0px" },
+        },
+        "fadeIn": {
+          from: { opacity: "0" },
+          to: { opacity: "1"},
+        },
+        "scrollDown": {
+          from: { top: "-100px" },
+          to: { top: "0px" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
