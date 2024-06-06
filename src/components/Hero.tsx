@@ -3,7 +3,10 @@ import { CircleArrowDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className='flex h-screen items-center justify-center bg-[url("./assets/hero-bg.svg")] bg-cover bg-center pb-12'>
+    <div
+      id='Hero'
+      className='flex h-screen items-center justify-center bg-[url("./assets/hero-bg.svg")] bg-cover bg-center pb-12'
+    >
       <div className='flex flex-col gap-6 text-left'>
         <h1 className='text-edge-outline font-secondary relative animate-[fadeAndScroll_1s_forwards_100ms] cursor-default bg-primary bg-clip-text text-2xl font-light leading-tight text-transparent opacity-0'>
           Hello, my name is...
