@@ -5,16 +5,16 @@ export default function Hero() {
   return (
     <div
       id='Hero'
-      className='flex h-screen items-center justify-center bg-[url("./assets/hero-bg.svg")] bg-cover bg-center pb-12'
+      className='flex h-screen items-center justify-center bg-[url("./assets/hero-bg.svg")] bg-cover bg-center px-12 pb-12'
     >
       <div className='flex flex-col gap-6 text-left'>
-        <h1 className='text-edge-outline font-secondary relative animate-[fadeAndScroll_1s_forwards_100ms] cursor-default bg-primary bg-clip-text text-2xl font-light leading-tight text-transparent opacity-0'>
+        <h1 className='text-edge-outline font-secondary text-md relative animate-[fadeAndScroll_1s_forwards_100ms] cursor-default bg-primary bg-clip-text font-light leading-tight text-transparent opacity-0 sm:text-2xl'>
           Hello, my name is...
         </h1>
-        <h1 className='font-primary relative animate-[fadeAndScroll_1s_forwards_800ms] cursor-default bg-accent bg-clip-text text-8xl font-bold leading-tight text-transparent opacity-0'>
+        <h1 className='font-primary relative animate-[fadeAndScroll_1s_forwards_800ms] cursor-default bg-accent bg-clip-text text-7xl font-bold leading-tight text-transparent opacity-0 sm:text-8xl'>
           Peter Do.
         </h1>
-        <p className='text-edge-outline font-secondary relative animate-[fadeAndScroll_1s_forwards_1500ms] cursor-default bg-primary bg-clip-text font-extralight leading-tight text-transparent opacity-0'>
+        <p className='text-edge-outline font-secondary text-md relative animate-[fadeAndScroll_1s_forwards_1500ms] cursor-default bg-primary bg-clip-text font-extralight leading-tight text-transparent opacity-0 sm:text-2xl'>
           Former Environmental Engineer. Current Full Stack Web Developer.
         </p>
         <Button
