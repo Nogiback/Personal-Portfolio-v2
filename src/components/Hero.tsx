@@ -15,7 +15,7 @@ export default function Hero() {
         <h1 className='text-edge-outline text-md relative animate-[fadeAndScroll_1s_forwards_100ms] cursor-default bg-primary bg-clip-text font-secondary font-light leading-tight text-transparent opacity-0 sm:text-2xl'>
           Hello, my name is...
         </h1>
-        <h1 className='relative animate-[fadeAndScroll_1s_forwards_800ms] cursor-default bg-accent bg-clip-text font-primary text-7xl font-bold leading-tight text-transparent opacity-0 sm:text-8xl'>
+        <h1 className='relative animate-[fadeAndScroll_1s_forwards_800ms] cursor-default bg-gradient-to-tl from-[#007f99] to-accent bg-clip-text font-primary text-7xl font-bold leading-tight text-transparent opacity-0 sm:text-8xl'>
           Peter Do.
         </h1>
         <p className='text-edge-outline text-md relative animate-[fadeAndScroll_1s_forwards_1500ms] cursor-default bg-primary bg-clip-text font-secondary font-extralight leading-tight text-transparent opacity-0 sm:text-2xl'>
@@ -28,7 +28,7 @@ export default function Hero() {
               ?.scrollIntoView({ behavior: 'smooth' })
           }
           variant='outline'
-          className='relative h-12 w-fit animate-[fadeIn_1s_forwards_2500ms] gap-2 font-secondary opacity-0 hover:text-secondary'
+          className='relative w-fit animate-[fadeIn_1s_forwards_2500ms] gap-2 bg-inherit font-secondary hover:text-secondary active:top-1'
         >
           Learn more about me <CircleArrowDown className='animate-bounce' />
         </Button>
