@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 
 export default function App() {
   return (
-    <div className='text-foreground'>
+    <div className='flex flex-col gap-12 text-foreground'>
       <Hero />
       <About />
       <Projects />

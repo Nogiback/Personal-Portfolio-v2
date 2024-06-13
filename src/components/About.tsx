@@ -1,12 +1,14 @@
 import SectionTitle from './ui/SectionTitle';
+import Ticker from 'framer-motion-ticker';
+import techstack from '@/utils/techstack';
 
 export default function About() {
   return (
     <div
       id='About'
-      className='flex h-screen w-full items-center justify-center px-12 sm:px-24'
+      className='flex min-h-screen w-full items-center justify-center px-12 sm:px-24'
     >
-      <div className='flex w-full flex-col gap-6'>
+      <div className='flex w-full flex-col gap-12'>
         <SectionTitle number='01.' title='About Me' />
         <div className='about-me-details flex flex-col items-center justify-center gap-8 md:flex-row'>
           <div className='avatar min-w-fit'>
@@ -48,7 +50,21 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className='tech-stack'></div>
+        <div className='tech-stack my-10'>
+          <h1 className='mb-4 text-center font-secondary text-xl font-bold'>
+            My Tech Stack
+          </h1>
+          <Ticker duration={50}>
+            {techstack.map((tech) => (
+              <img
+                key={tech.id}
+                src={tech.img}
+                alt={tech.name}
+                className='h-[80px] w-[80px] object-contain p-3 sm:h-[106px] sm:w-[106px]'
+              ></img>
+            ))}
+          </Ticker>
+        </div>
       </div>
     </div>
   );

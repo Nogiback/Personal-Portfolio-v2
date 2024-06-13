@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div
       id='Contact'
-      className='relative flex h-screen w-full items-center justify-center px-12 sm:px-24'
+      className='relative flex min-h-screen w-full items-center justify-center px-12 sm:px-24'
     >
       <Waves />
       <div className='flex w-full flex-col gap-6'>

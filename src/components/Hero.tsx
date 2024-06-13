@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div
       id='Hero'
-      className='flex h-screen items-center justify-center px-12 pb-12'
+      className='flex min-h-screen items-center justify-center px-12 pb-12'
     >
       <Waves />
       <div className='flex flex-col gap-6 text-left'>
