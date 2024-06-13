@@ -16,7 +16,7 @@ export default function About() {
               className='h-[200px] w-[200px] rounded-full border-2 border-accent object-cover shadow-xl grayscale transition-all duration-300 ease-in-out hover:grayscale-0 md:h-[400px] md:w-[300px] md:rounded-lg md:object-fill'
             />
           </div>
-          <div className='summary text-md flex flex-col gap-8 font-primary md:text-lg'>
+          <div className='summary text-md flex flex-col gap-8 font-primary lg:text-lg'>
             <p className='about-text'>
               Hi! My name is <span className='text-accent'>Peter Do</span>{' '}
               (pronounced "Doh!" like Homer Simpson) and I am a full stack web
