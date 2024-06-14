@@ -51,9 +51,9 @@ export default function About() {
           </div>
         </div>
         <div className='tech-stack my-10'>
-          <h1 className='mb-4 text-center font-secondary text-xl font-bold'>
+          <h3 className='mb-4 text-center font-secondary text-xl font-bold'>
             My Tech Stack
-          </h1>
+          </h3>
           <Ticker duration={50}>
             {techstack.map((tech) => (
               <img
