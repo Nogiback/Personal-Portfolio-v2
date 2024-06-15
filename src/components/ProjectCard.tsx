@@ -9,7 +9,7 @@ import {
 
 export default function ProjectCard() {
   return (
-    <Card className='text min-w-[350px] bg-inherit font-primary'>
+    <Card className='min-w-[400px] bg-background font-primary text-primary'>
       <CardHeader>
         <CardTitle>Card Title</CardTitle>
         <CardDescription>Card Description</CardDescription>

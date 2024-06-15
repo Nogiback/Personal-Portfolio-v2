@@ -1,5 +1,5 @@
 import SectionTitle from './ui/SectionTitle';
-import ProjectCard from './ui/ProjectCard';
+import ProjectCard from './ProjectCard';
 
 export default function Projects() {
   return (
@@ -9,7 +9,7 @@ export default function Projects() {
     >
       <div className='flex w-full flex-col gap-6'>
         <SectionTitle number='02.' title='Projects' />
-        <div className='flex w-full flex-wrap gap-4'>
+        <div className='flex w-full flex-wrap items-center justify-center gap-4'>
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
