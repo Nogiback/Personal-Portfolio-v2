@@ -6,30 +6,26 @@ export default function NavBar() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) {
-        // if scrolling down, hide the navbar and close menu
-        setShow(false);
-        setIsOpen(false);
-      } else {
-        // if scrolling up, show the navbar
-        setShow(true);
-      }
-
-      // remember the current page location for the next move
-      setLastScrollY(window.scrollY);
+  function controlNavbar() {
+    if (window.scrollY > lastScrollY) {
+      // if scrolling down, hide the navbar and close menu
+      setShow(false);
+      setIsOpen(false);
+    } else {
+      // if scrolling up, show the navbar
+      setShow(true);
     }
-  };
+
+    // remember the current page location for the next move
+    setLastScrollY(window.scrollY);
+  }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
+    window.addEventListener('scroll', controlNavbar);
 
-      return () => {
-        window.removeEventListener('scroll', controlNavbar);
-      };
-    }
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
   }, [lastScrollY]);
 
   function handleClick(element: string) {
