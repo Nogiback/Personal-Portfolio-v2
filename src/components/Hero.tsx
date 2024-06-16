@@ -2,8 +2,6 @@ import { Button } from '@/components/ui/button';
 import { CircleArrowDown } from 'lucide-react';
 import Waves from './ui/Waves';
 
-// bg-[url("./assets/hero-bg.svg")] bg-cover bg-center
-
 export default function Hero() {
   return (
     <div
