@@ -1,35 +1,63 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY) {
+        // if scrolling down, hide the navbar
+        setShow(false);
+        setIsOpen(false);
+      } else {
+        // if scrolling up, show the navbar
+        setShow(true);
+      }
+
+      // remember the current page location for the next move
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
 
   function handleClick() {
     setIsOpen(!isOpen);
   }
 
   return (
-    <div className='bg-white-100 text-forest-900 sticky left-0 right-0 top-0 z-10 flex items-center justify-between bg-background p-2 font-secondary'>
-      <Button
-        variant='ghost'
-        className='flex text-lg font-extrabold hover:text-secondary'
-      >
+    <div
+      className={`fixed left-0 right-0 top-0 z-10 flex items-center justify-between bg-inherit p-2 font-secondary backdrop-blur-md transition-all ${show ? 'translate-y-0' : '-translate-y-full'}`}
+    >
+      <Button variant='link' className='flex text-lg'>
         Peter.
       </Button>
       <div className='hidden items-center justify-center gap-2 md:flex'>
-        <Button variant='link' className=''>
-          <span className='text-accent'>01.&nbsp;</span> About
+        <Button variant='link' className='text-sm'>
+          <span className='text-accent'>01.&nbsp;</span> About Me
         </Button>
-        <Button variant='link' className=''>
+        <Button variant='link' className='text-sm'>
           <span className='text-accent'>02.&nbsp;</span> Projects
         </Button>
-        <Button variant='link' className=''>
+        <Button variant='link' className='text-sm'>
           <span className='text-accent'>03.&nbsp;</span> Contact
         </Button>
       </div>
 
       {/* Hamburger */}
-      <div className='flex gap-4 md:hidden'>
+      <div className='flex gap-4 p-4 md:hidden'>
         <button
           onClick={handleClick}
           className='flex flex-col items-center justify-center'
@@ -57,23 +85,30 @@ export default function NavBar() {
 
       {/* Hamburger Menu */}
       <ul
-        className={`text-white-100 absolute right-0 top-[100%] w-screen justify-end space-y-3 border-2 bg-background md:hidden ${
+        className={`absolute right-0 top-[100%] w-screen justify-end space-y-3 bg-background text-primary md:hidden ${
           isOpen ? 'flex flex-col' : 'hidden'
         }`}
       >
         <Button
           variant='link'
           onClick={handleClick}
-          className='hover:bg-forest-600 flex w-full justify-center py-4 duration-200'
+          className='flex w-full justify-center py-4 text-xs'
         >
-          Home
+          <span className='text-accent'>01.&nbsp;</span> About Me
         </Button>
         <Button
           variant='link'
           onClick={handleClick}
-          className='hover:bg-forest-600 flex w-full justify-center py-4 duration-200'
+          className='flex w-full justify-center py-4 text-xs duration-200'
         >
-          Shop
+          <span className='text-accent'>02.&nbsp;</span> Projects
+        </Button>
+        <Button
+          variant='link'
+          onClick={handleClick}
+          className='flex w-full justify-center py-4 text-xs duration-200'
+        >
+          <span className='text-accent'>03.&nbsp;</span> Contact
         </Button>
       </ul>
     </div>
