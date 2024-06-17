@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        primary: ["Plus Jakarta Sans", "ui-sans-serif"],
+        primary: ["Satoshi", "ui-sans-serif"],
         secondary: ["Noto Sans Mono", "ui-monospace"],
       },
       colors: {

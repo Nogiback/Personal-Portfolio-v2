@@ -16,9 +16,9 @@ export default function Hero() {
         <h1 className='relative animate-[fadeAndScroll_1s_forwards_800ms] cursor-default bg-gradient-to-tl from-[#007f99] to-accent bg-clip-text font-primary text-7xl font-bold leading-tight text-transparent opacity-0 sm:text-8xl'>
           Peter Do.
         </h1>
-        <p className='text-edge-outline text-md relative animate-[fadeAndScroll_1s_forwards_1500ms] cursor-default bg-primary bg-clip-text font-secondary font-extralight leading-tight text-transparent opacity-0 sm:text-2xl'>
+        <h1 className='text-edge-outline text-md relative animate-[fadeAndScroll_1s_forwards_1500ms] cursor-default bg-primary bg-clip-text font-secondary font-light leading-tight text-transparent opacity-0 sm:text-2xl'>
           Former Environmental Engineer. Current Full Stack Web Developer.
-        </p>
+        </h1>
         <Button
           onClick={() =>
             document
