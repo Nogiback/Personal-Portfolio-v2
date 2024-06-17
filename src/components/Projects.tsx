@@ -9,7 +9,7 @@ export default function Projects() {
     >
       <div className='flex w-full flex-col gap-6'>
         <SectionTitle number='02.' title='Projects' />
-        <div className='flex w-full flex-wrap items-center justify-center gap-4'>
+        <div className='grid w-full grid-cols-1 items-center justify-center gap-4 lg:grid-cols-2'>
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
