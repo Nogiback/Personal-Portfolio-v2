@@ -3,8 +3,7 @@ import Contact from './components/Contact';
 import Hero from './components/Hero';
 import NavBar from './components/Navbar';
 import Projects from './components/Projects';
-
-// bg-gradient-to-tl from-background via-foreground/5 to-background
+import ScrollToTop from './components/ui/ScrollToTop';
 
 export default function App() {
   return (
@@ -15,6 +14,7 @@ export default function App() {
         <About />
         <Projects />
         <Contact />
+        <ScrollToTop />
       </div>
     </>
   );
