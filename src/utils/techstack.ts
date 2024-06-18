@@ -4,7 +4,7 @@ import ccs3 from '../assets/tech/CSS3_logo.svg.png';
 import javascript from '../assets/tech/JavaScript-logo.png';
 import typescript from '../assets/tech/Typescript_logo_2020.svg.png';
 import react from '../assets/tech/React-icon.svg.png';
-import nextJS from '../assets/tech/nextjs-icon-2048x1234-pqycciiu.png';
+import nextJS from '../assets/tech/nextjs-icon-512x512-y563b8iq.png';
 import nodeJS from '../assets/tech/nodejs.png';
 import express from '../assets/tech/express.png';
 import mongoDB from '../assets/tech/mongodb.png';
@@ -18,7 +18,7 @@ import npm from '../assets/tech/540px-Npm-logo.svg.png';
 import jest from '../assets/tech/jest-logo-png-transparent.png';
 import jwt from '../assets/tech/jwt-3.svg';
 import vite from '../assets/tech/Vitejs-logo.svg.png';
-import vercel from '../assets/tech/Vercel_logo_black.svg.png';
+import vercel from '../assets/tech/vercel-icon-512x449-3422jidz.png';
 
 const techstack = [
   {

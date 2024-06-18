@@ -1,5 +1,6 @@
 import SectionTitle from './ui/SectionTitle';
 import ProjectCard from './ProjectCard';
+import projects from '../utils/projects';
 
 export default function Projects() {
   return (
@@ -9,10 +10,10 @@ export default function Projects() {
     >
       <div className='flex w-full flex-col gap-6'>
         <SectionTitle number='02.' title='Projects' />
-        <div className='grid w-full grid-cols-1 items-center justify-center gap-4 lg:grid-cols-2'>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+        <div className='grid w-full grid-cols-1 items-center justify-center gap-4 xl:grid-cols-2'>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
       </div>
     </div>

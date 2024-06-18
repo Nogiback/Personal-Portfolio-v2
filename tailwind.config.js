@@ -82,6 +82,10 @@ export default {
         "scrollDown": {
           from: { top: "-100px" },
           to: { top: "0px" },
+        },
+        "scrollUp": {
+          from: { top: "100px" },
+          to: { top: "0px" },
         }
       },
       animation: {
