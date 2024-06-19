@@ -19,13 +19,13 @@ export default function About() {
         <SectionTitle number='01.' title='About Me' />
         <div
           ref={ref1}
-          className={`flex flex-col items-center justify-center gap-8 md:flex-row ${isVisible1 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+          className={`flex flex-col items-center justify-center gap-8 lg:flex-row ${isVisible1 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
         >
-          <div className='avatar min-w-fit'>
+          <div className='min-w-fit'>
             <img
               src='./src/assets/IMG_3258.jpg'
               alt='Peter self portrait wearing sunglasses'
-              className='h-[200px] w-[200px] rounded-full border-2 border-accent object-cover shadow-xl grayscale transition-all duration-300 ease-in-out hover:grayscale-0 md:h-[400px] md:w-[300px] md:rounded-lg md:object-fill'
+              className='h-[200px] w-[200px] rounded-full border-2 border-accent object-cover shadow-xl grayscale transition-all duration-300 ease-in-out hover:grayscale-0 lg:h-[400px] lg:w-[300px] lg:rounded-lg lg:object-fill'
             />
           </div>
           <div className='text-md flex flex-col gap-8 font-primary lg:text-lg'>

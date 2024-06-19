@@ -44,7 +44,7 @@ export default function ProjectCard({ project }: Props) {
       <Carousel>
         <CarouselContent>
           {project.images.map((image) => (
-            <CarouselItem>
+            <CarouselItem key={image}>
               <img
                 className='h-[300px] w-full rounded-t-md object-cover object-top'
                 src={image}
@@ -64,7 +64,9 @@ export default function ProjectCard({ project }: Props) {
             </CardHeader>
             <CardContent className='flex flex-wrap gap-1'>
               {project.technologies.map((tech) => (
-                <Badge variant='outline'>{tech}</Badge>
+                <Badge key={tech} variant='outline'>
+                  {tech}
+                </Badge>
               ))}
             </CardContent>
             <CardFooter className='flex gap-2'>

@@ -41,7 +41,7 @@ export default function NavBar() {
   }
 
   return (
-    <div
+    <nav
       className={`fixed left-0 right-0 top-0 z-10 flex animate-[fadeAndScroll_1s_forwards_100ms] items-center justify-between border-b bg-inherit px-4 py-2 font-secondary opacity-0 backdrop-blur-lg transition-all ${show ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <Button
@@ -150,6 +150,6 @@ export default function NavBar() {
           </a>
         </Button>
       </ul>
-    </div>
+    </nav>
   );
 }
