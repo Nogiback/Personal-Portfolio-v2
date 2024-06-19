@@ -55,23 +55,23 @@ export default function NavBar() {
         <Button
           onClick={() => handleClick('About')}
           variant='link'
-          className='text-sm'
+          className='indent-2 text-sm'
         >
-          <span className='text-accent'>01.&nbsp;</span> About Me
+          <span className='text-accent'>01.</span> About Me
         </Button>
         <Button
           onClick={() => handleClick('Projects')}
           variant='link'
-          className='text-sm'
+          className='indent-2 text-sm'
         >
-          <span className='text-accent'>02.&nbsp;</span> Projects
+          <span className='text-accent'>02.</span> Projects
         </Button>
         <Button
           onClick={() => handleClick('Contact')}
           variant='link'
-          className='text-sm'
+          className='indent-2 text-sm'
         >
-          <span className='text-accent'>03.&nbsp;</span> Contact
+          <span className='text-accent'>03.</span> Contact
         </Button>
       </div>
       <Button
@@ -81,8 +81,7 @@ export default function NavBar() {
         className='hidden hover:text-background md:flex'
       >
         <a href={Resume} download='PeterDoResume' target='_blank'>
-          <FileText size={18} className='' />
-          &nbsp;Resume
+          <FileText size={18} className='mr-2' /> Resume
         </a>
       </Button>
 
@@ -122,23 +121,23 @@ export default function NavBar() {
         <Button
           variant='link'
           onClick={() => handleClick('About')}
-          className='flex w-full justify-center py-4 text-xs'
+          className='flex w-full justify-center py-4 indent-2 text-xs'
         >
-          <span className='text-accent'>01.&nbsp;</span> About Me
+          <span className='text-accent'>01.</span> About Me
         </Button>
         <Button
           variant='link'
           onClick={() => handleClick('Projects')}
-          className='flex w-full justify-center py-4 text-xs duration-200'
+          className='flex w-full justify-center py-4 indent-2 text-xs duration-200'
         >
-          <span className='text-accent'>02.&nbsp;</span> Projects
+          <span className='text-accent'>02.</span> Projects
         </Button>
         <Button
           variant='link'
           onClick={() => handleClick('Contact')}
-          className='flex w-full justify-center py-4 text-xs duration-200'
+          className='flex w-full justify-center py-4 indent-2 text-xs duration-200'
         >
-          <span className='text-accent'>03.&nbsp;</span> Contact
+          <span className='text-accent'>03.</span> Contact
         </Button>
         <Button
           asChild
@@ -146,8 +145,8 @@ export default function NavBar() {
           className='flex w-full justify-center py-4 text-xs duration-200'
         >
           <a href={Resume} download='PeterDoResume' target='_blank'>
-            <FileText size={18} className='' />
-            &nbsp;Resume
+            <FileText size={18} className='mr-2' />
+            Resume
           </a>
         </Button>
       </ul>

@@ -14,7 +14,7 @@ export default function About() {
       id='About'
       className={`flex min-h-screen w-full items-center justify-center px-12 sm:px-24 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
     >
-      <div className='flex w-full flex-col gap-12'>
+      <div className='flex w-full flex-col gap-8 sm:gap-12'>
         <SectionTitle number='01.' title='About Me' />
         <div className='flex flex-col items-center justify-center gap-8 md:flex-row'>
           <div className='avatar min-w-fit'>
@@ -38,7 +38,7 @@ export default function About() {
               engineering and spent 5 years in the industry, earning my P.Eng.
               designation. Ultimately, I decided to switch careers and dive back
               into the world of web development! I recently completed the Full
-              Stack Web Development curriculum at&nbsp;
+              Stack Web Development curriculum at{' '}
               <a
                 className='text-accent hover:underline'
                 href='https://www.theodinproject.com/'
