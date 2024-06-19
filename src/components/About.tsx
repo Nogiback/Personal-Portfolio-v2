@@ -6,17 +6,21 @@ import { useRef } from 'react';
 
 export default function About() {
   const ref1 = useRef<HTMLDivElement>(null);
-  const isVisible = useIsVisible(ref1);
+  const ref2 = useRef<HTMLDivElement>(null);
+  const isVisible1 = useIsVisible(ref1);
+  const isVisible2 = useIsVisible(ref2);
 
   return (
     <div
-      ref={ref1}
       id='About'
-      className={`flex min-h-screen w-full items-center justify-center px-12 sm:px-24 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+      className='flex min-h-screen w-full items-center justify-center px-12 sm:px-24'
     >
       <div className='flex w-full flex-col gap-8 sm:gap-12'>
         <SectionTitle number='01.' title='About Me' />
-        <div className='flex flex-col items-center justify-center gap-8 md:flex-row'>
+        <div
+          ref={ref1}
+          className={`flex flex-col items-center justify-center gap-8 md:flex-row ${isVisible1 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+        >
           <div className='avatar min-w-fit'>
             <img
               src='./src/assets/IMG_3258.jpg'
@@ -56,7 +60,10 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className='my-10'>
+        <div
+          ref={ref2}
+          className={`my-10 ${isVisible2 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+        >
           <h3 className='mb-4 text-center font-secondary text-xl font-bold'>
             My Tech Stack
           </h3>

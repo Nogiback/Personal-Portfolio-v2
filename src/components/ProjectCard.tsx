@@ -65,7 +65,7 @@ export default function ProjectCard({ project }: Props) {
       </Carousel>
       <GlowCapture>
         <Glow>
-          <div className='glow:bg-accent/20'>
+          <div className='rounded-b-md glow:bg-accent/20'>
             <CardHeader>
               <CardTitle>{project.name}</CardTitle>
               <CardDescription>{project.tagline}</CardDescription>
