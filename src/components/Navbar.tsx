@@ -28,6 +28,7 @@ export default function NavBar() {
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastScrollY]);
 
   function handleClick(element: string) {

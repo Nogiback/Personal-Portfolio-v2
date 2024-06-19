@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/card';
 import { useIsVisible } from '@/hooks/useIsVisible';
 import { useRef } from 'react';
+import { GlowCapture, Glow } from '@codaworks/react-glow';
 
 type Props = {
   project: {
@@ -26,24 +27,28 @@ export default function ProjectCard({ project }: Props) {
   const isVisible = useIsVisible(ref1);
 
   return (
-    <Card
-      ref={ref1}
-      className={`w-full bg-background font-primary text-primary ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
-    >
-      <img
-        className='h-[300px] w-full rounded-t-lg object-cover'
-        src={project.image}
-      ></img>
-      <CardHeader>
-        <CardTitle>{project.name}</CardTitle>
-        <CardDescription>{project.tagline}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p>{project.technologies}</p>
-      </CardContent>
-      <CardFooter>
-        <p>{project.link}</p>
-      </CardFooter>
-    </Card>
+    <GlowCapture>
+      <Glow color='purple'>
+        <Card
+          ref={ref1}
+          className={`glow:bg-accent/10 w-full bg-background font-primary text-primary ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+        >
+          <img
+            className='h-[300px] w-full rounded-t-md object-cover'
+            src={project.image}
+          ></img>
+          <CardHeader>
+            <CardTitle>{project.name}</CardTitle>
+            <CardDescription>{project.tagline}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>{project.technologies}</p>
+          </CardContent>
+          <CardFooter>
+            <p>{project.link}</p>
+          </CardFooter>
+        </Card>
+      </Glow>
+    </GlowCapture>
   );
 }

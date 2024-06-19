@@ -98,5 +98,6 @@ export default {
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
     require("tailwindcss-debug-screens"),
+    require("@codaworks/react-glow/tailwind"),
   ],
 };
