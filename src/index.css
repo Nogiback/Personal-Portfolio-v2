@@ -15,7 +15,6 @@
   }
 
   body {
-    --glow-color: hsl(183 77% 50%);
     overflow-x: hidden;
     background: linear-gradient(-45deg, #001220, #0a3347, #001220, #0a3347);
     background-size: 400% 400%;
@@ -121,7 +120,7 @@
     --accent: 183 77% 50%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 93.2% 46.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
@@ -153,7 +152,7 @@
     --accent: 183 77% 50%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 93.8% 46.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;

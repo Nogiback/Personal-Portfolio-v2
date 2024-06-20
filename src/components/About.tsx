@@ -19,7 +19,7 @@ export default function About() {
         <SectionTitle number='01.' title='About Me' />
         <div
           ref={ref1}
-          className={`flex flex-col items-center justify-center gap-8 lg:flex-row ${isVisible1 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+          className={`flex flex-col items-center justify-center gap-12 lg:flex-row ${isVisible1 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
         >
           <div className='min-w-fit'>
             <img
@@ -28,7 +28,7 @@ export default function About() {
               className='h-[200px] w-[200px] rounded-full border-2 border-accent object-cover shadow-xl grayscale transition-all duration-300 ease-in-out hover:grayscale-0 lg:h-[400px] lg:w-[300px] lg:rounded-lg lg:object-fill'
             />
           </div>
-          <div className='text-md flex flex-col gap-8 font-primary lg:text-lg'>
+          <div className='text-md flex flex-col gap-8 font-primary lg:w-1/2 lg:text-lg'>
             <p className=''>
               Hi! My name is <span className='text-accent'>Peter Do</span>{' '}
               (pronounced "Doh!" like Homer Simpson) and I am a full stack web
