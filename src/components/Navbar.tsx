@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from './ui/button';
-import { FileText } from 'lucide-react';
+import { FileDown, Code } from 'lucide-react';
 import Resume from '../assets/resume.pdf';
 
 export default function NavBar() {
@@ -49,7 +49,7 @@ export default function NavBar() {
         variant='link'
         className='flex text-lg'
       >
-        Peter.
+        <Code size={32} />
       </Button>
       <div className='hidden w-full items-center justify-center gap-2 md:flex lg:gap-12'>
         <Button
@@ -78,10 +78,10 @@ export default function NavBar() {
         asChild
         variant='outline'
         size='sm'
-        className='hidden hover:text-background md:flex'
+        className='hidden hover:text-accent md:flex'
       >
         <a href={Resume} download='PeterDoResume' target='_blank'>
-          <FileText size={18} className='mr-2' /> Resume
+          <FileDown size={18} className='mr-2' /> Resume
         </a>
       </Button>
 
@@ -114,7 +114,7 @@ export default function NavBar() {
 
       {/* Hamburger Menu */}
       <ul
-        className={`absolute right-0 top-[100%] w-screen justify-end bg-background text-primary md:hidden ${
+        className={`absolute right-0 top-[100%] w-screen animate-[fadeIn_500ms_ease-in-out] justify-end bg-background text-primary md:hidden ${
           isOpen ? 'flex flex-col' : 'hidden'
         }`}
       >
@@ -145,7 +145,7 @@ export default function NavBar() {
           className='flex w-full justify-center py-4 text-xs duration-200'
         >
           <a href={Resume} download='PeterDoResume' target='_blank'>
-            <FileText size={18} className='mr-2' />
+            <FileDown size={18} className='mr-2' />
             Resume
           </a>
         </Button>

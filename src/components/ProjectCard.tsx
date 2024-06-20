@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: Props) {
           ref={ref1}
           className={`w-full bg-background font-primary text-primary glow:border-accent/50 glow:bg-accent/10 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
         >
-          <Carousel>
+          <Carousel className='z-[99]'>
             <CarouselContent>
               {project.images.map((image) => (
                 <CarouselItem key={image}>
@@ -87,7 +87,7 @@ export default function ProjectCard({ project }: Props) {
                 className='flex gap-2 glow:border-accent/10 glow:bg-accent/5'
               >
                 <a href={project.github} target='_blank'>
-                  <Github size={18} /> Github
+                  <Github size={20} /> Github
                 </a>
               </Button>
             ) : null}
