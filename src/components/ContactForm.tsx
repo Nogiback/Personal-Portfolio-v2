@@ -15,6 +15,8 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Glow, GlowCapture } from '@codaworks/react-glow';
+import { toast } from 'sonner';
+import { useState } from 'react';
 
 const formSchema = z.object({
   name: z
@@ -29,6 +31,8 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -38,9 +42,32 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitted(true);
+    const rawFormData = {
+      ...values,
+      access_key: import.meta.env.VITE_FORM_API_KEY,
+    };
+
+    const json = JSON.stringify(rawFormData);
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    });
+    const result = await response.json();
+    if (result.success === true) {
+      toast.success('Message successfully sent!');
+      setIsSubmitted(false);
+    } else {
+      toast.error('Oops! Something went wrong!');
+      setIsSubmitted(false);
+    }
   }
+
   return (
     <GlowCapture>
       <Glow>
@@ -104,6 +131,7 @@ export default function ContactForm() {
                 variant='outline'
                 className='w-full hover:text-background'
                 type='submit'
+                disabled={isSubmitted}
               >
                 Send
               </Button>

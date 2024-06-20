@@ -37,65 +37,58 @@ export default function ProjectCard({ project }: Props) {
   const isVisible = useIsVisible(ref1);
 
   return (
-    <Card
-      ref={ref1}
-      className={`w-full bg-background font-primary text-primary ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
-    >
-      <Carousel>
-        <CarouselContent>
-          {project.images.map((image) => (
-            <CarouselItem key={image}>
-              <img
-                className='h-[300px] w-full rounded-t-md object-cover object-top'
-                src={image}
-              ></img>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-      <GlowCapture>
-        <Glow>
-          <div className='rounded-b-md glow:bg-accent/20'>
-            <CardHeader>
-              <CardTitle>{project.name}</CardTitle>
-              <CardDescription>{project.tagline}</CardDescription>
-            </CardHeader>
-            <CardContent className='flex flex-wrap gap-1'>
-              {project.technologies.map((tech) => (
-                <Badge key={tech} variant='outline'>
-                  {tech}
-                </Badge>
+    <GlowCapture>
+      <Glow>
+        <Card
+          ref={ref1}
+          className={`w-full bg-background font-primary text-primary glow:border-accent/20 glow:bg-accent/20 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+        >
+          <Carousel>
+            <CarouselContent>
+              {project.images.map((image) => (
+                <CarouselItem key={image}>
+                  <img
+                    className='h-[300px] w-full rounded-t-md object-cover object-top'
+                    src={image}
+                  ></img>
+                </CarouselItem>
               ))}
-            </CardContent>
-            <CardFooter className='flex gap-2'>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+          <CardHeader>
+            <CardTitle>{project.name}</CardTitle>
+            <CardDescription>{project.tagline}</CardDescription>
+          </CardHeader>
+          <CardContent className='flex flex-wrap gap-1'>
+            {project.technologies.map((tech) => (
+              <Badge key={tech} variant='outline'>
+                {tech}
+              </Badge>
+            ))}
+          </CardContent>
+          <CardFooter className='flex gap-2'>
+            <Button asChild variant='outline' size='sm' className='flex gap-2'>
+              <a href={project.link} target='_blank'>
+                <Eye /> Live
+              </a>
+            </Button>
+            {project.github ? (
               <Button
                 asChild
                 variant='outline'
                 size='sm'
                 className='flex gap-2'
               >
-                <a href={project.link} target='_blank'>
-                  <Eye /> Live
+                <a href={project.github} target='_blank'>
+                  <Github size={18} /> Github
                 </a>
               </Button>
-              {project.github ? (
-                <Button
-                  asChild
-                  variant='outline'
-                  size='sm'
-                  className='flex gap-2'
-                >
-                  <a href={project.github} target='_blank'>
-                    <Github size={18} /> Github
-                  </a>
-                </Button>
-              ) : null}
-            </CardFooter>
-          </div>
-        </Glow>
-      </GlowCapture>
-    </Card>
+            ) : null}
+          </CardFooter>
+        </Card>
+      </Glow>
+    </GlowCapture>
   );
 }

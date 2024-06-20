@@ -1,3 +1,4 @@
+import { Toaster } from 'sonner';
 import About from './components/About';
 import Contact from './components/Contact';
 import Hero from './components/Hero';
