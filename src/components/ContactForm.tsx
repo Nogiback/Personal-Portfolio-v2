@@ -21,13 +21,13 @@ import { useState } from 'react';
 const formSchema = z.object({
   name: z
     .string()
-    .min(2, { message: 'Name must contain at least 2 characters' })
+    .min(1, { message: 'Please provide a valid name' })
     .max(50, { message: 'Name must not be longer than 50 characters' }),
-  email: z.string().email(),
+  email: z.string().email({ message: 'Please enter a valid email' }),
   message: z
     .string()
-    .min(1, { message: 'Message must contain at least 1 character' })
-    .max(250, { message: 'Message must not be longer than 250 characters' }),
+    .min(1, { message: 'A message is required' })
+    .max(500, { message: 'Message must not be longer than 500 characters' }),
 });
 
 export default function ContactForm() {
@@ -60,10 +60,10 @@ export default function ContactForm() {
     });
     const result = await response.json();
     if (result.success === true) {
-      toast.success('Message successfully sent!');
+      toast.success('Message sent! I will get back to you ASAP!');
       setIsSubmitted(false);
     } else {
-      toast.error('Oops! Something went wrong!');
+      toast.error('Oops! Something went wrong! Please try again.');
       setIsSubmitted(false);
     }
   }
@@ -71,7 +71,7 @@ export default function ContactForm() {
   return (
     <GlowCapture>
       <Glow>
-        <Card className='w-[650px] p-8 font-primary glow:border-accent/20 glow:bg-accent/20'>
+        <Card className='w-[650px] p-8 font-primary glow:border-accent/50 glow:bg-accent/10'>
           <CardTitle className='mb-8 flex items-center justify-center'>
             Send Me A Message!
           </CardTitle>
@@ -129,7 +129,7 @@ export default function ContactForm() {
               />
               <Button
                 variant='outline'
-                className='w-full hover:text-background'
+                className='w-full glow:border-accent/10 glow:bg-accent/5'
                 type='submit'
                 disabled={isSubmitted}
               >

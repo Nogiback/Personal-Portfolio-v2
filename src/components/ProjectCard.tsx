@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: Props) {
       <Glow>
         <Card
           ref={ref1}
-          className={`w-full bg-background font-primary text-primary glow:border-accent/20 glow:bg-accent/20 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+          className={`w-full bg-background font-primary text-primary glow:border-accent/50 glow:bg-accent/10 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
         >
           <Carousel>
             <CarouselContent>
@@ -69,7 +69,12 @@ export default function ProjectCard({ project }: Props) {
             ))}
           </CardContent>
           <CardFooter className='flex gap-2'>
-            <Button asChild variant='outline' size='sm' className='flex gap-2'>
+            <Button
+              asChild
+              variant='outline'
+              size='sm'
+              className='flex gap-2 glow:border-accent/10 glow:bg-accent/5'
+            >
               <a href={project.link} target='_blank'>
                 <Eye /> Live
               </a>
@@ -79,7 +84,7 @@ export default function ProjectCard({ project }: Props) {
                 asChild
                 variant='outline'
                 size='sm'
-                className='flex gap-2'
+                className='flex gap-2 glow:border-accent/10 glow:bg-accent/5'
               >
                 <a href={project.github} target='_blank'>
                   <Github size={18} /> Github
