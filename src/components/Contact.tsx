@@ -4,6 +4,7 @@ import SectionTitle from './ui/SectionTitle';
 import Waves from './ui/Waves';
 import { Github, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { useIsVisible } from '@/hooks/useIsVisible';
+import contactPortrait from '../assets/images/PeterCartoon.jpg';
 
 export default function Contact() {
   const ref1 = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ export default function Contact() {
           <div className='flex flex-col items-center gap-8'>
             <div className='min-w-fit'>
               <img
-                src='./src/assets/PeterCartoon.jpg'
+                src={contactPortrait}
                 alt='Peter self portrait in cartoon mode'
                 className='h-[150px] w-[150px] rounded-full border border-accent object-cover shadow-xl grayscale transition-all duration-300 ease-in-out hover:grayscale-0'
               />

@@ -3,6 +3,7 @@ import Ticker from 'framer-motion-ticker';
 import techstack from '@/utils/techstack';
 import { useIsVisible } from '@/hooks/useIsVisible';
 import { useRef } from 'react';
+import portrait from '../assets/images/IMG_3258.jpg';
 
 export default function About() {
   const ref1 = useRef<HTMLDivElement>(null);
@@ -23,7 +24,7 @@ export default function About() {
         >
           <div className='min-w-fit'>
             <img
-              src='./src/assets/IMG_3258.jpg'
+              src={portrait}
               alt='Peter self portrait wearing sunglasses'
               className='h-[200px] w-[200px] rounded-full border-2 border-accent object-cover shadow-xl grayscale transition-all duration-300 ease-in-out hover:grayscale-0 lg:h-[400px] lg:w-[300px] lg:rounded-lg lg:object-fill'
             />
