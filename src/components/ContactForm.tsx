@@ -76,14 +76,14 @@ export default function ContactForm() {
       <Glow>
         <Card
           ref={ref1}
-          className={`w-[650px] p-8 font-primary glow:border-accent/50 glow:bg-accent/10 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+          className={`w-[400px] p-8 font-primary glow:border-accent/50 glow:bg-accent/10 md:w-[650px] ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
         >
           <CardTitle className='mb-8 flex items-center justify-center'>
-            Send Me A Message!
+            ...Or Send Me A Message!
           </CardTitle>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
-              <div className='flex items-center justify-between gap-8'>
+              <div className='flex flex-col items-center justify-between gap-8 md:flex-row'>
                 <FormField
                   control={form.control}
                   name='name'
