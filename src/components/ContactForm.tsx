@@ -16,7 +16,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Glow, GlowCapture } from '@codaworks/react-glow';
 import { toast } from 'sonner';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { useIsVisible } from '@/hooks/useIsVisible';
 
 const formSchema = z.object({
   name: z
@@ -32,6 +33,8 @@ const formSchema = z.object({
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const ref1 = useRef<HTMLDivElement>(null);
+  const isVisible = useIsVisible(ref1);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -71,7 +74,10 @@ export default function ContactForm() {
   return (
     <GlowCapture>
       <Glow>
-        <Card className='w-[650px] p-8 font-primary glow:border-accent/50 glow:bg-accent/10'>
+        <Card
+          ref={ref1}
+          className={`w-[650px] p-8 font-primary glow:border-accent/50 glow:bg-accent/10 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+        >
           <CardTitle className='mb-8 flex items-center justify-center'>
             Send Me A Message!
           </CardTitle>
@@ -129,7 +135,7 @@ export default function ContactForm() {
               />
               <Button
                 variant='outline'
-                className='w-full glow:border-accent/10 glow:bg-accent/5'
+                className='w-full glow:border-accent/30 glow:bg-accent/5'
                 type='submit'
                 disabled={isSubmitted}
               >

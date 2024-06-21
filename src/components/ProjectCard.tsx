@@ -73,7 +73,7 @@ export default function ProjectCard({ project }: Props) {
               asChild
               variant='outline'
               size='sm'
-              className='flex gap-2 glow:border-accent/10 glow:bg-accent/5'
+              className='flex gap-2 glow:border-accent/30 glow:bg-accent/5'
             >
               <a href={project.link} target='_blank'>
                 <Eye /> Live
@@ -84,7 +84,7 @@ export default function ProjectCard({ project }: Props) {
                 asChild
                 variant='outline'
                 size='sm'
-                className='flex gap-2 glow:border-accent/10 glow:bg-accent/5'
+                className='flex gap-2 glow:border-accent/30 glow:bg-accent/5'
               >
                 <a href={project.github} target='_blank'>
                   <Github size={20} /> Github
