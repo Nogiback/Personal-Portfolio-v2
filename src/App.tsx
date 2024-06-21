@@ -7,7 +7,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 
 export default function App() {
   return (
-    <div className='flex flex-col gap-12 text-foreground'>
+    <div className='relative flex flex-col gap-12 overflow-x-hidden text-foreground'>
       <NavBar />
       <Hero />
       <About />
