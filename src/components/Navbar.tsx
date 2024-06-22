@@ -42,7 +42,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-10 flex animate-[fadeAndScroll_1s_forwards_100ms] items-center justify-between border-b bg-inherit px-4 py-2 font-secondary opacity-0 backdrop-blur-lg transition-all ${show ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed left-0 right-0 top-0 z-[99] flex animate-[fadeAndScroll_1s_forwards_100ms] items-center justify-between border-b bg-inherit px-4 py-2 font-secondary opacity-0 backdrop-blur-lg transition-all ${show ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <Button
         onClick={() => handleClick('Hero')}
@@ -114,7 +114,7 @@ export default function NavBar() {
 
       {/* Hamburger Menu */}
       <ul
-        className={`absolute right-0 top-[100%] w-screen animate-[fadeIn_500ms_ease-in-out] justify-end bg-background text-primary md:hidden ${
+        className={`absolute right-0 top-[100%] z-[99] w-screen animate-[fadeIn_500ms_ease-in-out] justify-end bg-background text-primary md:hidden ${
           isOpen ? 'flex flex-col' : 'hidden'
         }`}
       >
