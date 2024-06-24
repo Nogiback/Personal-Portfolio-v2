@@ -22,7 +22,7 @@ const projects = [
     id: uuidv4(),
     name: 'Momentum Advertising & Design',
     images: [momentum1, momentum2, momentum3],
-    tagline: 'A straightforward landing page for a local online business.',
+    tagline: 'A neat landing page for a local online business.',
     technologies: [
       'Typescript',
       'NextJS',
