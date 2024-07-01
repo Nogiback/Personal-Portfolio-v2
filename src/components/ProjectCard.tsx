@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import { Button } from './ui/button';
 import { useIsVisible } from '@/hooks/useIsVisible';
@@ -46,12 +47,22 @@ export default function ProjectCard({ project }: Props) {
           <Carousel className='z-10'>
             <CarouselContent>
               {project.images.map((image) => (
-                <CarouselItem key={image}>
-                  <img
-                    className='h-[300px] w-full rounded-t-md object-cover object-top'
-                    src={image}
-                  ></img>
-                </CarouselItem>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <CarouselItem key={image}>
+                      <img
+                        className='h-[300px] w-full rounded-t-md object-cover object-top'
+                        src={image}
+                      ></img>
+                    </CarouselItem>
+                  </DialogTrigger>
+                  <DialogContent className='flex w-full items-center'>
+                    <img
+                      className='h-full w-full rounded-t-md object-cover'
+                      src={image}
+                    ></img>
+                  </DialogContent>
+                </Dialog>
               ))}
             </CarouselContent>
             <CarouselPrevious />
