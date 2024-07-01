@@ -14,7 +14,7 @@ export default function About() {
   return (
     <div
       id='About'
-      className='flex min-h-screen w-full items-center justify-center px-12 sm:px-24'
+      className='flex min-h-screen w-full items-center justify-center px-8 sm:px-24'
     >
       <div className='flex w-full flex-col gap-8 sm:gap-12'>
         <SectionTitle number='01.' title='About Me' />
