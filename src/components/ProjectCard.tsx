@@ -87,7 +87,7 @@ export default function ProjectCard({ project }: Props) {
               className='flex gap-2 glow:border-accent/30 glow:bg-accent/5'
             >
               <a href={project.link} target='_blank'>
-                <Eye /> Live
+                <Eye /> Demo
               </a>
             </Button>
             {project.github ? (
