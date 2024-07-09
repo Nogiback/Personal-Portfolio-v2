@@ -47,7 +47,7 @@ export default function ProjectCard({ project }: Props) {
           <Carousel className='z-10'>
             <CarouselContent>
               {project.images.map((image) => (
-                <Dialog>
+                <Dialog key={image}>
                   <DialogTrigger asChild>
                     <CarouselItem key={image}>
                       <img

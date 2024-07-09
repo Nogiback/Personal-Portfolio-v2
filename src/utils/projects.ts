@@ -8,14 +8,15 @@ import nogihub3 from '../assets/projects/nogihub3.png';
 import nogichat1 from '../assets/projects/nogichat1.png';
 import nogichat2 from '../assets/projects/nogichat2.png';
 import nogichat3 from '../assets/projects/nogichat3.png';
+import waldo1 from '../assets/projects/waldo1.png';
+import waldo2 from '../assets/projects/waldo2.png';
+import waldo3 from '../assets/projects/waldo3.png';
 import nogiblog1 from '../assets/projects/nogiblog1.png';
 import nogiblog2 from '../assets/projects/nogiblog2.png';
 import nogiblog3 from '../assets/projects/nogiblog3.png';
 import nogishop1 from '../assets/projects/nogishop1.png';
 import nogishop2 from '../assets/projects/nogishop2.png';
 import nogishop3 from '../assets/projects/nogishop3.png';
-import resumebuilder1 from '../assets/projects/resumebuilder1.png';
-import resumebuilder2 from '../assets/projects/resumebuilder2.png';
 
 const projects = [
   {
@@ -78,6 +79,23 @@ const projects = [
   },
   {
     id: uuidv4(),
+    name: `Where's Waldo?`,
+    images: [waldo1, waldo2, waldo3],
+    tagline: `A fresh take on the classic book series, Where's Waldo?`,
+    technologies: [
+      'Typescript',
+      'React',
+      'ChakraUI',
+      'NodeJS',
+      'Express',
+      'Mongoose',
+      'MongoDB',
+    ],
+    link: 'https://nogi-wheres-waldo.vercel.app',
+    github: 'https://github.com/Nogiback/Wheres-Waldo-Client',
+  },
+  {
+    id: uuidv4(),
     name: 'Personal Blog',
     images: [nogiblog1, nogiblog2, nogiblog3],
     tagline:
@@ -110,15 +128,6 @@ const projects = [
     ],
     link: 'https://the-nogi-shop.vercel.app',
     github: 'https://github.com/Nogiback/Shopping-Cart',
-  },
-  {
-    id: uuidv4(),
-    name: 'Resume Builder',
-    images: [resumebuilder1, resumebuilder2],
-    tagline: 'An elegant resume builder built with React and Sass.',
-    technologies: ['Javascript', 'React', 'HTML', 'Sass'],
-    link: 'https://resume-builder-eight-mu.vercel.app/',
-    github: 'https://github.com/Nogiback/Resume-Builder',
   },
 ];
 
