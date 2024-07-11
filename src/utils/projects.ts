@@ -118,7 +118,8 @@ const projects = [
     id: uuidv4(),
     name: 'The Nogi Shop',
     images: [nogishop1, nogishop2, nogishop3],
-    tagline: 'An e-commerce store page for houseplants created with React.',
+    tagline:
+      'A modern e-commerce store page for houseplants created with React.',
     technologies: [
       'Javascript',
       'React',
