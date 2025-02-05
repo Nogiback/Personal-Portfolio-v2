@@ -19,6 +19,10 @@ import jest from '../assets/tech/jest-logo-png-transparent.png';
 import jwt from '../assets/tech/jwt-3.svg';
 import vite from '../assets/tech/Vitejs-logo.svg.png';
 import vercel from '../assets/tech/vercel-icon-512x449-3422jidz.png';
+import prisma from '../assets/tech/prisma-seeklogo.png';
+import oauth from '../assets/tech/Oauth_logo.svg.png';
+import reactquery from '../assets/tech/react-query-seeklogo.png';
+import shadcn from '../assets/tech/shadcn-ui-seeklogo.png';
 
 const techstack = [
   {
@@ -48,6 +52,11 @@ const techstack = [
   },
   {
     id: uuidv4(),
+    name: 'React Query',
+    img: reactquery,
+  },
+  {
+    id: uuidv4(),
     name: 'NextJS',
     img: nextJS,
   },
@@ -73,6 +82,11 @@ const techstack = [
   },
   {
     id: uuidv4(),
+    name: 'Prisma',
+    img: prisma,
+  },
+  {
+    id: uuidv4(),
     name: 'Sass',
     img: sass,
   },
@@ -80,6 +94,11 @@ const techstack = [
     id: uuidv4(),
     name: 'TailwindCSS',
     img: tailwind,
+  },
+  {
+    id: uuidv4(),
+    name: 'Shadcn UI',
+    img: shadcn,
   },
   {
     id: uuidv4(),
@@ -110,6 +129,11 @@ const techstack = [
     id: uuidv4(),
     name: 'JWT',
     img: jwt,
+  },
+  {
+    id: uuidv4(),
+    name: 'OAuth',
+    img: oauth,
   },
   {
     id: uuidv4(),
