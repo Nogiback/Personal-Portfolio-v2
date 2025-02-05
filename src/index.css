@@ -96,6 +96,9 @@
       transform: translate3d(0, 5px, 0);
     }
   }
+  :root {
+    --radius: 0.5rem;
+  }
 }
 
 @layer base {
