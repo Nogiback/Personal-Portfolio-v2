@@ -1,7 +1,14 @@
 import { v4 as uuidv4 } from 'uuid';
-import momentum1 from '../assets/projects/momentum1.png';
-import momentum2 from '../assets/projects/momentum2.png';
-import momentum3 from '../assets/projects/momentum3.png';
+import empowered1 from '../assets/projects/empowered1.png';
+import empowered2 from '../assets/projects/empowered2.png';
+import empowered3 from '../assets/projects/empowered3.png';
+import empowered4 from '../assets/projects/empowered4.png';
+import tyler1 from '../assets/projects/tylerplumbing1.png';
+import tyler2 from '../assets/projects/tylerplumbing2.png';
+import tyler3 from '../assets/projects/tylerplumbing3.png';
+import nogidisc1 from '../assets/projects/nogidisc1.png';
+import nogidisc2 from '../assets/projects/nogidisc2.png';
+import nogidisc3 from '../assets/projects/nogidisc3.png';
 import nogihub1 from '../assets/projects/nogihub1.png';
 import nogihub2 from '../assets/projects/nogihub2.png';
 import nogihub3 from '../assets/projects/nogihub3.png';
@@ -21,19 +28,53 @@ import nogishop3 from '../assets/projects/nogishop3.png';
 const projects = [
   {
     id: uuidv4(),
-    name: 'Momentum Advertising & Design',
-    images: [momentum1, momentum2, momentum3],
-    tagline: 'A neat landing page for a local online business.',
+    name: 'Empowered Futures',
+    images: [empowered1, empowered2, empowered3, empowered4],
+    tagline:
+      'A non-profit website and web application for empowering young adults in the workforce.',
     technologies: [
       'Typescript',
-      'NextJS',
       'React',
+      'NextJS',
       'TailwindCSS',
-      'Vercel',
+      'PostgreSQL',
+      'GraphQL',
+      'Prisma',
+      'NextAuth',
+      'Azure',
+    ],
+    link: 'https://www.empoweredfutures.ca/',
+    github: '',
+  },
+  {
+    id: uuidv4(),
+    name: 'NogiDisc',
+    images: [nogidisc1, nogidisc2, nogidisc3],
+    tagline: 'A dynamic disc inventory application for disc golf enthusiasts.',
+    technologies: [
+      'Typescript',
+      'React',
+      'Shadcn/UI',
+      'TailwindCSS',
+      'Tanstack Query',
       'PostgreSQL',
       'Prisma',
+      'NodeJS',
+      'Express',
+      'OAuth',
+      'JWT',
+      'Zod',
     ],
-    link: 'https://momentumads.ca/',
+    link: '',
+    github: 'https://github.com/Nogiback/NogiDisc',
+  },
+  {
+    id: uuidv4(),
+    name: 'Tyler Mckenna Plumbing',
+    images: [tyler1, tyler2, tyler3],
+    tagline: 'A clean single page website for a local plumbing business.',
+    technologies: ['Typescript', 'NextJS', 'React', 'TailwindCSS', 'Vercel'],
+    link: 'https://tyler-mckenna-plumbing-v1.vercel.app/',
     github: '',
   },
   {

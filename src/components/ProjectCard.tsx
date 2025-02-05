@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: Props) {
       <Glow>
         <Card
           ref={ref1}
-          className={`w-full bg-background font-primary text-primary glow:border-accent/50 glow:bg-accent/10 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
+          className={`flex h-full min-h-[530px] w-full flex-col items-stretch justify-between bg-background font-primary text-primary glow:border-accent/50 glow:bg-accent/10 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in`}
         >
           <Carousel className='z-10'>
             <CarouselContent>
@@ -80,16 +80,30 @@ export default function ProjectCard({ project }: Props) {
             ))}
           </CardContent>
           <CardFooter className='flex gap-2'>
-            <Button
-              asChild
-              variant='outline'
-              size='sm'
-              className='flex gap-2 glow:border-accent/30 glow:bg-accent/5'
-            >
-              <a href={project.link} target='_blank'>
-                <Eye /> Demo
-              </a>
-            </Button>
+            {project.link ? (
+              <Button
+                asChild
+                variant='outline'
+                size='sm'
+                className='flex gap-2 glow:border-accent/30 glow:bg-accent/5'
+              >
+                <a href={project.link} target='_blank'>
+                  <Eye /> Demo
+                </a>
+              </Button>
+            ) : (
+              <Button
+                asChild
+                disabled
+                variant='outline'
+                size='sm'
+                className='flex gap-2 glow:border-accent/30 glow:bg-accent/5'
+              >
+                <a href='#' target='_blank'>
+                  Coming Soon
+                </a>
+              </Button>
+            )}
             {project.github ? (
               <Button
                 asChild

@@ -6,7 +6,9 @@
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/src/assets/fonts/Satoshi-Variable.ttf');
+  src:
+    url('/src/assets/font/Satoshi-Regular.woff') format('woff'),
+    url('/src/assets/fonts/Satoshi-Regular.woff2') format('woff2');
 }
 
 @layer base {
