@@ -10,8 +10,30 @@ import weather3 from '../assets/projects/weather3.png';
 import todolist1 from '../assets/projects/todolist1.png';
 import todolist2 from '../assets/projects/todolist2.png';
 import todolist3 from '../assets/projects/todolist3.png';
+import nogishop1 from '../assets/projects/nogishop1.png';
+import nogishop2 from '../assets/projects/nogishop2.png';
+import nogishop3 from '../assets/projects/nogishop3.png';
+import waldo1 from '../assets/projects/waldo1.png';
+import waldo2 from '../assets/projects/waldo2.png';
+import waldo3 from '../assets/projects/waldo3.png';
 
 const moreprojects = [
+  {
+    id: uuidv4(),
+    name: 'The Nogi Shop',
+    images: [nogishop1, nogishop2, nogishop3],
+    tagline:
+      'A modern e-commerce store page for houseplants created with React.',
+    technologies: [
+      'Javascript',
+      'React',
+      'TailwindCSS',
+      'React Testing Library',
+      'Jest',
+    ],
+    link: 'https://the-nogi-shop.vercel.app',
+    github: 'https://github.com/Nogiback/Shopping-Cart',
+  },
   {
     id: uuidv4(),
     name: 'Resume Builder',
@@ -20,6 +42,23 @@ const moreprojects = [
     technologies: ['Javascript', 'React', 'HTML', 'Sass'],
     link: 'https://resume-builder-eight-mu.vercel.app/',
     github: 'https://github.com/Nogiback/Resume-Builder',
+  },
+  {
+    id: uuidv4(),
+    name: `Where's Waldo?`,
+    images: [waldo1, waldo2, waldo3],
+    tagline: `A fresh take on the classic book series, Where's Waldo?`,
+    technologies: [
+      'Typescript',
+      'React',
+      'ChakraUI',
+      'NodeJS',
+      'Express',
+      'Mongoose',
+      'MongoDB',
+    ],
+    link: 'https://nogi-wheres-waldo.vercel.app',
+    github: 'https://github.com/Nogiback/Wheres-Waldo-Client',
   },
   {
     id: uuidv4(),
