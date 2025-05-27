@@ -7,8 +7,8 @@
 @font-face {
   font-family: 'Satoshi';
   src:
-    url('/assets/font/Satoshi-Regular.woff') format('woff'),
-    url('/assets/fonts/Satoshi-Regular.woff2') format('woff2');
+    url('/assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Satoshi-Regular.woff') format('woff');
 }
 
 @layer base {
